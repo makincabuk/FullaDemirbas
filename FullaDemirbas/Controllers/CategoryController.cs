@@ -18,8 +18,8 @@ namespace FullaDemirbas.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBl();
-            return View(categoryvalues);
+            //var categoryvalues = cm.GetAllBl();
+            return View();
         }
         [HttpGet]
         public ActionResult AddCategory()
@@ -29,7 +29,7 @@ namespace FullaDemirbas.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBl(p);
+            //cm.CategoryAddBl(p);
             return RedirectToAction("GetCategoryList");
         }
     }
