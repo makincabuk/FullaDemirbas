@@ -1,4 +1,4 @@
-﻿@using EntityLayer.Concrete 
+﻿@using EntityLayer.Concrete
 @model List<Category>
 @{
     Layout = null;
@@ -21,10 +21,8 @@
             <td>@item.CategoryDescription</td>
             <td>@item.CategoryStatus</td>
         </tr>
-    } 
+    }
 
 
 </table>
-<button class="btn btn-info">Yeni Kategori</button>
-<button class="btn btn-warning">Kategori Listesi</button>
-<button class="btn btn-danger">Kategori Açıklamaları</button> 
+<a href="/Category/AddCategory" class="btn btn-info">Yeni Kategori</a>
