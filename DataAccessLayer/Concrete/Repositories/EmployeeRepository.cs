@@ -19,6 +19,11 @@ namespace DataAccessLayer.Concrete.Repositories
             throw new NotImplementedException();
         }
 
+        public Employee Get(Expression<Func<Employee, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Employee p)
         {
             throw new NotImplementedException();
