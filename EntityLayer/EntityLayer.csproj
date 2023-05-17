@@ -54,8 +54,8 @@
     <Compile Include="Concrete\About.cs" />
     <Compile Include="Concrete\Category.cs" />
     <Compile Include="Concrete\Content.cs" />
-    <Compile Include="Concrete\Employee.cs" />
-    <Compile Include="Concrete\Heading.cs" />
+    <Compile Include="Concrete\SubCategory.cs" />
+    <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

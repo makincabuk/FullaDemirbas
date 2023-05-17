@@ -15,10 +15,10 @@ namespace EntityLayer.Concrete
         public string ContentValue { get; set; }
         public string ContentDate { get; set; }
 
-        public  int HeadingId { get; set; }
+        public int HeadingId { get; set; }
         public virtual Heading Heading { get; set; }
 
-        public int? EmployeeId { get; set; }
-        public virtual Employee Employee { get; set; }
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }

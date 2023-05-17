@@ -10,36 +10,36 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete.Repositories
 {
-    class EmployeeRepository : IEmployeeDal
+    class UserRepository : IUserDal
     {
         Context c = new Context();
-        DbSet<Employee> _object;
-        public void Delete(Employee p)
+        DbSet<User> _object;
+        public void Delete(User p)
         {
             throw new NotImplementedException();
         }
 
-        public Employee Get(Expression<Func<Employee, bool>> filter)
+        public User Get(Expression<Func<User, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Employee p)
+        public void Insert(User p)
         {
             throw new NotImplementedException();
         }
 
-        public List<Employee> List()
+        public List<User> List()
         {
             throw new NotImplementedException();
         }
 
-        public List<Employee> List(Expression<Func<Employee, bool>> filter)
+        public List<User> List(Expression<Func<User, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Employee p)
+        public void Update(User p)
         {
             throw new NotImplementedException();
         }

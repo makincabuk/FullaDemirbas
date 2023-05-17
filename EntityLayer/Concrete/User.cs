@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Employee
+    public class User
     {
         [Key]
-        public int EmployeeId { get; set; }
+        public int UserID{ get; set; }
         [StringLength(100)]
-        public string Employeename { get; set; }
+        public string Username { get; set; }
         [StringLength(100)]
-        public string EmployeeSurName { get; set; }
+        public string UserSurName { get; set; }
         [StringLength(1000)]
-        public string EmployeeImage { get; set; }
+        public string Usermage { get; set; }
         [StringLength(100)]
-        public string EmployeeMail { get; set; }
+        public string UserMail { get; set; }
         [StringLength(100)]
-        public string EmployeePassword { get; set; }
+        public string UserPassword { get; set; }
         public ICollection<Content> contents { get; set; }
         public ICollection<Heading> headings { get; set; }
     }
