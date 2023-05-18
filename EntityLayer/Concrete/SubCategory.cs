@@ -14,10 +14,10 @@ namespace EntityLayer.Concrete
 
         [StringLength(100)]
         public string SubCategoryName { get; set; }
-
+        public string SubCategoryDescription { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
-        public ICollection<Content> Contents { get; set; }
+        public ICollection<Fixture> fixtures { get; set; }
     }
 }

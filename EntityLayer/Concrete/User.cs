@@ -21,7 +21,6 @@ namespace EntityLayer.Concrete
         public string UserMail { get; set; }
         [StringLength(100)]
         public string UserPassword { get; set; }
-        public ICollection<Content> contents { get; set; }
-        public ICollection<Heading> headings { get; set; }
+        public ICollection<Fixture> fixtures { get; set; }
     }
 }

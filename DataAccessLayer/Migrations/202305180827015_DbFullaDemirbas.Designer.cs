@@ -13,7 +13,7 @@ namespace DataAccessLayer.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202305171423567_DbFullaDemirbas"; }
+            get { return "202305180827015_DbFullaDemirbas"; }
         }
         
         string IMigrationMetadata.Source
