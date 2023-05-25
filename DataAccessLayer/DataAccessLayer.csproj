@@ -68,9 +68,9 @@
     <Compile Include="EntityFramework\EfFixtureDal.cs" />
     <Compile Include="EntityFramework\EfSubCategoryDal.cs" />
     <Compile Include="EntityFramework\EfUserDal.cs" />
-    <Compile Include="Migrations\202305180827015_DbFullaDemirbas.cs" />
-    <Compile Include="Migrations\202305180827015_DbFullaDemirbas.designer.cs">
-      <DependentUpon>202305180827015_DbFullaDemirbas.cs</DependentUpon>
+    <Compile Include="Migrations\202305181411343_DbFullaDemirbas.cs" />
+    <Compile Include="Migrations\202305181411343_DbFullaDemirbas.designer.cs">
+      <DependentUpon>202305181411343_DbFullaDemirbas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,8 +86,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305180827015_DbFullaDemirbas.resx">
-      <DependentUpon>202305180827015_DbFullaDemirbas.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305181411343_DbFullaDemirbas.resx">
+      <DependentUpon>202305181411343_DbFullaDemirbas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

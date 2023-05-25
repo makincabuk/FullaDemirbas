@@ -12,15 +12,23 @@ namespace EntityLayer.Concrete
         [Key]
         public int UserID{ get; set; }
         [StringLength(100)]
-        public string Username { get; set; }
+        public string UserName { get; set; }
         [StringLength(100)]
-        public string UserSurName { get; set; }
-        [StringLength(1000)]
+        public string Uname { get; set; }
+        [StringLength(100)]
+        public string USurName { get; set; }
+        [StringLength(100)]
         public string Usermage { get; set; }
         [StringLength(100)]
         public string UserMail { get; set; }
-        [StringLength(100)]
+        [StringLength(11)]
+        public string UserPhone { get; set; }
+        public bool Status { get; set; }
         public string UserPassword { get; set; }
+        //public bool Admin { get; set; }
         public ICollection<Fixture> fixtures { get; set; }
+
+        public int StoreID { get; set; }
+        public virtual Store Store { get; set; }
     }
 }

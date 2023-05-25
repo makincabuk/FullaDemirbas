@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
     public class SubCategory
     {
         [Key]
-        public int SubCategoryId { get; set; }
+        public int SubCategoryID { get; set; }
 
         [StringLength(100)]
         public string SubCategoryName { get; set; }
