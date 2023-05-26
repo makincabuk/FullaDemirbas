@@ -15,6 +15,8 @@ namespace EntityLayer.Concrete
         [StringLength(100)]
         public string SubCategoryName { get; set; }
         public string SubCategoryDescription { get; set; }
+
+        public bool SubCategoryStatus { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 

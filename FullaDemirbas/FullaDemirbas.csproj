@@ -2290,8 +2290,8 @@
     <Content Include="Views\User\EditUser.cshtml" />
     <Content Include="Views\SubCategory\Index.cshtml" />
     <Content Include="Views\SubCategory\AddSubCategory.cshtml" />
-    <Content Include="Views\SubCategory\FixtureBySubCategory.cshtml" />
     <Content Include="Views\Fixture\FixtureBySubCategory.cshtml" />
+    <Content Include="Views\SubCategory\EditSubCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

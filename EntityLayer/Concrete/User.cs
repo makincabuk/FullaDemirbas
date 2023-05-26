@@ -23,7 +23,7 @@ namespace EntityLayer.Concrete
         public string UserMail { get; set; }
         [StringLength(11)]
         public string UserPhone { get; set; }
-        public bool Status { get; set; }
+        public bool UserStatus { get; set; }
         public string UserPassword { get; set; }
         //public bool Admin { get; set; }
         public ICollection<Fixture> fixtures { get; set; }

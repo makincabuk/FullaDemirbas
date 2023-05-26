@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.SubCategory
+
+@{
+    ViewBag.Title = "EditSubCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Alt Katagori Güncelleme sayfası</h2>
+@using (Html.BeginForm("EditSubCategory", "SubCategory", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Başlık ID")
+        @Html.TextBoxFor(x => x.SubCategoryName, new { @class = "form-control" })
+
+    </div>
+}
+

@@ -39,9 +39,21 @@ namespace FullaDemirbas.Controllers
             sm.SubCategoryAdd(Sb);
             return RedirectToAction("Index");
         }
-        public ActionResult FixtureBySubCategory()
+        [HttpGet]
+        public ActionResult EditSubCategory(int id)
         {
-            return View();
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }
+                                                  ).ToList();
+            ViewBag.vlsc = valuecategory;
+            var SubCategoryValue = sm.GetByID(id);
+            return View(SubCategoryValue);
+
+
         }
     }
 }

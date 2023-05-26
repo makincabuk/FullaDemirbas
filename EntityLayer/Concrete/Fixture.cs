@@ -34,5 +34,7 @@ namespace EntityLayer.Concrete
         public int SubCategoryId { get; set; }
 
         public virtual SubCategory SubCategory { get; set; }
+
+        public bool UserStatus { get; set; }
     }
 }

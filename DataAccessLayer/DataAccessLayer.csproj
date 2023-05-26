@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202305181411343_DbFullaDemirbas.designer.cs">
       <DependentUpon>202305181411343_DbFullaDemirbas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305260720157_statusupdate.cs" />
+    <Compile Include="Migrations\202305260720157_statusupdate.designer.cs">
+      <DependentUpon>202305260720157_statusupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +92,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305181411343_DbFullaDemirbas.resx">
       <DependentUpon>202305181411343_DbFullaDemirbas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305260720157_statusupdate.resx">
+      <DependentUpon>202305260720157_statusupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

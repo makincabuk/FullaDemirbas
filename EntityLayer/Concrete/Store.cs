@@ -11,6 +11,8 @@ namespace EntityLayer.Concrete
         public int StoreID { get; set; }
         public string StoreName { get; set; }
 
+        public bool StoreStatus { get; set; }
+
         public ICollection<User> User { get; set; }
     }
 }
