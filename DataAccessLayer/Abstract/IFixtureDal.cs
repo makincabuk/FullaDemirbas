@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    interface IFixtureDal : IRepository<Fixture>
+    public interface IFixtureDal : IRepository<Fixture>
     {
     }
 }

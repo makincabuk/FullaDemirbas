@@ -39,5 +39,9 @@ namespace FullaDemirbas.Controllers
             sm.SubCategoryAdd(Sb);
             return RedirectToAction("Index");
         }
+        public ActionResult FixtureBySubCategory()
+        {
+            return View();
+        }
     }
 }

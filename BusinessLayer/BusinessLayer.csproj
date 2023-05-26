@@ -61,9 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICategoryService.cs" />
+    <Compile Include="Abstract\IFixtureService.cs" />
     <Compile Include="Abstract\ISubCategoryService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
+    <Compile Include="Concrete\FixtureManager.cs" />
     <Compile Include="Concrete\SubCategoryManager.cs" />
     <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,10 +10,14 @@
 <body class="hold-transition sidebar-mini">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+        <p align="right">
+            <a href="/SubCategory/AddSubCategory" class="btn btn-info">Alt Kategori Ekle</a>
+        </p>
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Projects</h1>
+                    <h1>
+                    </h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -23,7 +27,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Proje İşlemleri</h3>
+                <h3 class="card-title">Alt Kategori İşlemleri</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -45,7 +49,7 @@
                             </th>
                             <th style="width: 30%">
                                 Alt Katagori Adı
-                            </th>                            
+                            </th>
                             <th style="width: 20%">
                             </th>
                         </tr>
@@ -55,37 +59,37 @@
                         {
 
 
-                        <tr>
-                            <td>
-                                @item.SubCategoryID
-                            </td>
-                            <td>
-                                @item.Category.CategoryName
-                            </td>
-                            <td>
-                                @item.SubCategoryName
-                            </td>
-                            @*<td class="project-state">
-                                <span class="badge badge-success">Success</span>
-                            </td>*@
-                            <td class="project-actions text-right">
-                                <a class="btn btn-primary btn-sm" href="#">
-                                    <i class="fas fa-folder">
-                                    </i>
-                                    Demirbaşlar
-                                </a>
-                                <a class="btn btn-info btn-sm" href="#">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Düzenle
-                                </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    @item.SubCategoryID
+                                </td>
+                                <td>
+                                    @item.Category.CategoryName
+                                </td>
+                                <td>
+                                    @item.SubCategoryName
+                                </td>
+                                @*<td class="project-state">
+                                        <span class="badge badge-success">Success</span>
+                                    </td>*@
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Fixture/FixtureBySubCategory/@item.SubCategoryID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        Demirbaşlar
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="#">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Düzenle
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" href="#">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Sil
+                                    </a>
+                                </td>
+                            </tr>
                         }
 
                     </tbody>
@@ -99,22 +103,21 @@
 </html>
 
 @*<h2>Index</h2>
-<table class="table table-bordered">
-    <tr>
-        <td>ID</td>
-        <td>Alt Katagori</td>
-        <td>Katagori</td>
-    </tr>
-    @foreach (var item in Model)
-    {
+    <table class="table table-bordered">
         <tr>
-            <td>@item.SubCategoryID</td>
-            <td>@item.SubCategoryName</td>
-            <td>@item.Category.CategoryName</td>
+            <td>ID</td>
+            <td>Alt Katagori</td>
+            <td>Katagori</td>
         </tr>
-    }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SubCategoryID</td>
+                <td>@item.SubCategoryName</td>
+                <td>@item.Category.CategoryName</td>
+            </tr>
+        }
 
 
-</table>
-<br />*@
-<a href="/SubCategory/AddSubCategory" class="btn btn-info">Alt Kategori Ekle</a>
+    </table>
+    <br />*@
