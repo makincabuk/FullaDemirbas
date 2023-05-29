@@ -19,6 +19,13 @@ namespace FullaDemirbas.Controllers
             var subcategoryvalues = sm.GetList();
             return View(subcategoryvalues);
         }
+        public ActionResult DSubCategory()
+        {
+
+            var subcategoryvalues = sm.GetList();
+            return View(subcategoryvalues);
+        }
+
         [HttpGet]
         public ActionResult AddSubCategory()
         {
@@ -55,5 +62,25 @@ namespace FullaDemirbas.Controllers
 
 
         }
+        [HttpPost]
+        public ActionResult EditSubCategory(SubCategory s)
+        {
+            sm.SubCategoryUpdate(s);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableSubCategory(int id)
+        {
+            var SubCategoryValue = sm.GetByID(id);
+            sm.SubCategoryEnable(SubCategoryValue);
+            return RedirectToAction("DSubCategory");
+        }
+        public ActionResult DisableSubCategory(int id)
+        {
+
+            var SubCategoryValue = sm.GetByID(id);
+            sm.SubCategoryDisable(SubCategoryValue);
+            return RedirectToAction("Index");
+        }
     }
+
 }

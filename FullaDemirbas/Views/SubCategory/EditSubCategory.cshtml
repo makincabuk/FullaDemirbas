@@ -9,9 +9,18 @@
 @using (Html.BeginForm("EditSubCategory", "SubCategory", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.Label("Başlık ID")
+        @Html.Label("Başlık ID :")
+        @Html.TextBoxFor(x => x.SubCategoryID, new { @class = "form-control", @readonly = false })
+        <br />
+        @Html.Label("Alt Kategori Adı :")
         @Html.TextBoxFor(x => x.SubCategoryName, new { @class = "form-control" })
-
+        <br />
+        @Html.Label("Kategori Adı :")
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlsc, new { @class = "form-control" })
+        <br />
+        @Html.Label("Aktif/Pasif :")
+        @Html.TextBoxFor(x => x.SubCategoryStatus, new { @class = "form-control" })
+        <button class="btn btn-success">Güncelle</button>
     </div>
 }
 

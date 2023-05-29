@@ -33,10 +33,25 @@ namespace BusinessLayer.Concrete
              _subCategoryDal.Insert(subcategory);
         }
 
-        public void SubCategoryDelete(SubCategory subcategory) 
+        public void SubCategoryDisable(SubCategory subcategory)
         {
-             _subCategoryDal.Delete(subcategory);
+            subcategory.SubCategoryStatus = false;
+            SubCategoryUpdate(subcategory);
         }
+
+        public void SubCategoryEnable(SubCategory subCategory)
+        {
+            subCategory.SubCategoryStatus = true;
+            SubCategoryUpdate(subCategory);
+        }
+
+        //public void SubCategoryDelete(SubCategory subcategory) 
+        //{
+        //    subcategory.SubCategoryStatus = false;
+        //    SubCategoryUpdate(subcategory);
+        //    // _subCategoryDal.Delete(subcategory);
+
+        //}
 
         public void SubCategoryUpdate(SubCategory subcategory)
         {

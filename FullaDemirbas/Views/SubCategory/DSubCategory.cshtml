@@ -22,12 +22,11 @@
             </div>
         </div><!-- /.container-fluid -->
     </section>
-    <!-- Main content -->
     <section class="content">
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h1 class="card-title">Alt Kategori Aktif Tablosu</h1>
+                <h3 class="card-title">Alt Kategori Pasif Tablosu</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -58,7 +57,7 @@
                         @foreach (var item in Model)
                         {
 
-                            if (item.SubCategoryStatus)
+                            if (item.SubCategoryStatus == false)
                             {
 
 
@@ -86,10 +85,10 @@
                                             </i>
                                             Düzenle
                                         </a>
-                                        <a class="btn btn-danger btn-sm" href="/SubCategory/DisableSubCategory/@item.SubCategoryID">
+                                        <a class="btn btn-success btn-sm" href="/SubCategory/EnableSubCategory/@item.SubCategoryID">
                                             <i class="fas fa-trash">
-                                            </i> 
-                                            Pasif Et
+                                            </i>
+                                            Aktif Et
                                         </a>
                                     </td>
                                 </tr>
@@ -103,7 +102,6 @@
         </div>
         <!-- /.card -->
     </section>
-   
 </body>
 </html>
 

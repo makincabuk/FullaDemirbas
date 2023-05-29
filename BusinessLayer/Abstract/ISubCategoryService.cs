@@ -13,9 +13,9 @@ namespace BusinessLayer.Abstract
         List<SubCategory> GetList();
         void SubCategoryAdd(SubCategory subcategory);
         SubCategory GetByID(int id);
-        void SubCategoryDelete(SubCategory subcategory);
+        void SubCategoryDisable(SubCategory subcategory);
 
-
+        void SubCategoryEnable(SubCategory subCategory);
         void SubCategoryUpdate(SubCategory subcategory);
 
 
