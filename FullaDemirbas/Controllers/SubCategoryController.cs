@@ -30,7 +30,7 @@ namespace FullaDemirbas.Controllers
         public ActionResult AddSubCategory()
         {
 
-            List<SelectListItem> valuecategory = (from x in cm.GetList()
+            List<SelectListItem> valuecategory = (from x in cm.GetList().Where(x=>x.CategoryStatus==true)
                                                   select new SelectListItem
                                                   {
                                                       Text = x.CategoryName,
@@ -49,7 +49,7 @@ namespace FullaDemirbas.Controllers
         [HttpGet]
         public ActionResult EditSubCategory(int id)
         {
-            List<SelectListItem> valuecategory = (from x in cm.GetList()
+            List<SelectListItem> valuecategory = (from x in cm.GetList().Where(x=>x.CategoryStatus==true)
                                                   select new SelectListItem
                                                   {
                                                       Text = x.CategoryName,
@@ -72,11 +72,10 @@ namespace FullaDemirbas.Controllers
         {
             var SubCategoryValue = sm.GetByID(id);
             sm.SubCategoryEnable(SubCategoryValue);
-            return RedirectToAction("DSubCategory");
+            return RedirectToAction("Index");
         }
         public ActionResult DisableSubCategory(int id)
         {
-
             var SubCategoryValue = sm.GetByID(id);
             sm.SubCategoryDisable(SubCategoryValue);
             return RedirectToAction("Index");

@@ -29,6 +29,18 @@ namespace BusinessLayer.Concrete
             _categorydal.Delete(category);
         }
 
+        public void CategoryDisable(Category category)
+        {
+            category.CategoryStatus = false;
+            CategoryUpdate(category);
+        }
+
+        public void CategoryEnable(Category category)
+        {
+            category.CategoryStatus = true;
+            CategoryUpdate(category);
+        }
+
         public void CategoryUpdate(Category category)
         {
             _categorydal.Update(category);

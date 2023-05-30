@@ -18,8 +18,7 @@
         @Html.Label("Kategori Adı :")
         @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlsc, new { @class = "form-control" })
         <br />
-        @Html.Label("Aktif/Pasif :")
-        @Html.TextBoxFor(x => x.SubCategoryStatus, new { @class = "form-control" })
+        <br />
         <button class="btn btn-success">Güncelle</button>
     </div>
 }

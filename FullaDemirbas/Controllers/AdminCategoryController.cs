@@ -45,10 +45,23 @@ namespace FullaDemirbas.Controllers
             }
             return View();
         }
-        public ActionResult DeleteCategory(int id)
+        //public ActionResult DeleteCategory(int id)
+        //{
+        //    var categoryvalue = cm.GetByID(id);
+        //    cm.CategoryDelete(categoryvalue);
+        //    return RedirectToAction("Index");
+        //}
+
+        public ActionResult DisableCategory(int id)
         {
             var categoryvalue = cm.GetByID(id);
-            cm.CategoryDelete(categoryvalue);
+            cm.CategoryDisable(categoryvalue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableCategory(int id)
+        {
+            var categoryvalue = cm.GetByID(id);
+            cm.CategoryEnable(categoryvalue);
             return RedirectToAction("Index");
         }
         [HttpGet]
