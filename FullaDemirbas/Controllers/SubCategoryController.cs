@@ -85,15 +85,50 @@ namespace FullaDemirbas.Controllers
         }
         public ActionResult EnableSubCategory(int id)
         {
-            var SubCategoryValue = sm.GetByID(id);
-            sm.SubCategoryEnable(SubCategoryValue);
-            return RedirectToAction("Index");
+
+            try
+            {
+                var SubCategoryValue = sm.GetByID(id);
+                sm.SubCategoryEnable(SubCategoryValue);
+                if (Request.UrlReferrer.Segments[2].ToString() == "SubCategoryByCategory/")
+                {
+                    return RedirectToAction(Request.UrlReferrer.Segments[2] + "/" + Request.UrlReferrer.Segments[3]);
+                }
+                else
+                {
+
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("Index");
+            }
+
         }
         public ActionResult DisableSubCategory(int id)
         {
-            var SubCategoryValue = sm.GetByID(id);
-            sm.SubCategoryDisable(SubCategoryValue);
-            return RedirectToAction("Index");
+            try
+            {
+                var SubCategoryValue = sm.GetByID(id);
+                sm.SubCategoryDisable(SubCategoryValue);
+                if (Request.UrlReferrer.Segments[2].ToString() == "SubCategoryByCategory/")
+                {
+                    return RedirectToAction(Request.UrlReferrer.Segments[2] + "/" + Request.UrlReferrer.Segments[3]);
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+
+                }
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("Index");
+            }
+
         }
 
         public ActionResult SubCategoryByCategory(int id)
