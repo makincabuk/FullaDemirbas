@@ -28,6 +28,12 @@ namespace BusinessLayer.Concrete
             return _subCategoryDal.List();
         }
 
+        public List<SubCategory> GetListBySubCategoryID(int id)
+        {
+
+            return _subCategoryDal.List(x => x.CategoryId == id);
+        }
+
         public void SubCategoryAdd(SubCategory subcategory)
         {
              _subCategoryDal.Insert(subcategory);

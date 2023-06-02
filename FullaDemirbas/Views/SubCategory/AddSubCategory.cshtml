@@ -18,7 +18,8 @@
     @Html.ValidationMessageFor(x => x.SubCategoryDescription)
     <br />
     @Html.Label("Kategori Seçiniz :")
-    @Html.DropDownListFor(x => x.CategoryId,(List<SelectListItem>)ViewBag.vlsc,new {@class = "form form-control" })*
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlsc, new { @class = "form form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryId)
     <br />
     <button class="btn btn-info">Alt Kategori Ekle</button>
 </div>

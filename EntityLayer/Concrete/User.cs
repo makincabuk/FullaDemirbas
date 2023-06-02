@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
     public class User
     {
         [Key]
-        public int UserID{ get; set; }
+        public int UserID { get; set; }
         [StringLength(100)]
         public string UserName { get; set; }
         [StringLength(100)]

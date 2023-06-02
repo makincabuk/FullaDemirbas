@@ -19,6 +19,7 @@ namespace BusinessLayer.Abstract
         void SubCategoryUpdate(SubCategory subcategory);
 
 
+        List<SubCategory> GetListBySubCategoryID(int id);
         //List<SubCategory> GetList();
         //void SubCategoryAdd(SubCategory subcategory);
         //void SubCategoryDelete(SubCategory subcategory);
