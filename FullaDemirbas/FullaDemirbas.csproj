@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\FixtureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -297,6 +298,10 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\ErrorTemplate-main\colorlib-error-404-10\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\ErrorTemplate-main\colorlib-error-404-10\img\bg.jpg" />
+    <Content Include="AdminLTE-3.0.4\ErrorTemplate-main\colorlib-error-404-10\index.html" />
+    <Content Include="AdminLTE-3.0.4\ErrorTemplate-main\colorlib-error-404-10\readme.txt" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2296,6 +2301,8 @@
     <Content Include="Views\SubCategory\DSubCategory.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\SubCategory\SubCategoryByCategory.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\ErrorPage\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
