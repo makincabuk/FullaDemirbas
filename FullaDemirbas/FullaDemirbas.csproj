@@ -2303,6 +2303,7 @@
     <Content Include="Views\SubCategory\SubCategoryByCategory.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\ErrorPage\Page403.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

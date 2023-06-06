@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\About.cs" />
+    <Compile Include="Concrete\Brand.cs" />
     <Compile Include="Concrete\Category.cs" />
     <Compile Include="Concrete\Fixture.cs" />
+    <Compile Include="Concrete\Model.cs" />
     <Compile Include="Concrete\Store.cs" />
     <Compile Include="Concrete\SubCategory.cs" />
     <Compile Include="Concrete\User.cs" />
