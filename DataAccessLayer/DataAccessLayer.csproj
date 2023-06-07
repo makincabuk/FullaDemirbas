@@ -82,6 +82,10 @@
     <Compile Include="Migrations\202305260720157_statusupdate.designer.cs">
       <DependentUpon>202305260720157_statusupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306070637054_Brand_Model_Add.cs" />
+    <Compile Include="Migrations\202306070637054_Brand_Model_Add.designer.cs">
+      <DependentUpon>202306070637054_Brand_Model_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305260720157_statusupdate.resx">
       <DependentUpon>202305260720157_statusupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306070637054_Brand_Model_Add.resx">
+      <DependentUpon>202306070637054_Brand_Model_Add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
