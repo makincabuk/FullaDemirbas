@@ -28,17 +28,17 @@ namespace BusinessLayer.Concrete
             return _storeDal.List();
         }
 
-        public void UserAdd(Store store)
+        public void StoreAdd(Store store)
         {
             _storeDal.Insert(store);
         }
 
-        public void UserDelete(Store store)
+        public void StoreDelete(Store store)
         {
             throw new NotImplementedException();
         }
 
-        public void UserUpdate(Store store)
+        public void StoreUpdate(Store store)
         {
             _storeDal.Update(store);
         }

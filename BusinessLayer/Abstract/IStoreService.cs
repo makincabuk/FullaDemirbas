@@ -10,9 +10,9 @@ namespace BusinessLayer.Abstract
     interface IStoreService
     {
         List<Store> GetList();
-        void UserAdd(Store store);
-        void UserDelete(Store store);
-        void UserUpdate(Store store);
+        void StoreAdd(Store store);
+        void StoreDelete(Store store);
+        void StoreUpdate(Store store);
         Store GetByID(int id);
     }
 }

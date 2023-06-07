@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,17 @@ namespace FullaDemirbas.Controllers
         {
             var Storevalues = SM.GetList();
             return View(Storevalues);
+        }
+        [HttpGet]
+        public ActionResult AddStore()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddStore(Store store)
+        {
+            SM.StoreAdd(store);
+            return RedirectToAction("Index");
         }
 
     }

@@ -2306,6 +2306,7 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\ErrorPage\Page403.cshtml" />
     <Content Include="Views\Brand\Index.cshtml" />
+    <Content Include="Views\Brand\AddBrand.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
