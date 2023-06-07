@@ -14,12 +14,13 @@
     <div class="modal" id="Modal1">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">Mağaza Bilgilerini Giriniz
+                <div class="modal-header">
+                    Mağaza Bilgilerini Giriniz
                 </div>
                 <form method="post" action="/Store/AddStore">
                     <div class="modal-body">
                         <label>Mağaza Adını</label>
-                        <input type="text" name="StoreName" class="form-control"/>
+                        <input type="text" name="StoreName" class="form-control" />
                         <br />
                         <button class="btn btn-info">Kaydet</button>
                     </div>
@@ -35,7 +36,7 @@
 <body class="hold-transition sidebar-mini">
     <!-- /.navbar -->
     <!-- Content Header (Page header) -->
-    
+
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -47,52 +48,150 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
+    <!-- /.content -->
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Main content -->
     <section class="content">
         <!-- Default box -->
-        <div class="card card-solid">
-            <div class="card-body pb-0">
-                <div class="row d-flex align-items-stretch">
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                            <div class="card bg-light">
-                                <div class="card-header text-muted border-bottom-0">
-                                    <b>@item.StoreName</b>
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            @*<ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Adı:  @item.Uname</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Soyadı:  @item.USurName</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Mail:  @item.UserMail</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone :  @item.UserPhone</li>
-                                                </ul>*@
-                                        </div>
-                                        @*<div class="col-5 text-center">
-                                            <img src="~/AdminLTE-3.0.4/dist/img/Store.png" alt="" class="img-circle img-fluid">
-                                        </div>*@
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="text-right">
-                                        <a href="#" class="btn btn-sm bg-teal">
-                                            <i class="fas fa-comments">Mağaza Demirbaşları</i>
-                                        </a> 
-                                        <a href="/User/EditUser/" class="btn btn-sm btn-primary">
-                                            <i class="fas fa-user"></i>  Düzenle
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    }
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Aktif Mağazalar</h1>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
+            <div class="card-body p-0">
+
+
+                <section class="content">
+                    <!-- Default box -->
+                    @*<div class="card card-solid">*@
+                    <div class="card-body pb-0">
+                        <div class="row d-flex align-items-stretch">
+                            @foreach (var item in Model)
+                            {
+                                if (item.StoreStatus)
+                                {
+                                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                                        <div class="card bg-light">
+                                            <div class="card-header text-muted border-bottom-0">
+                                                <b>@item.StoreName</b>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="text-right">
+                                                    <a href="#" class="btn btn-sm bg-teal">
+                                                        <i class="fas fa-comments">Mağaza Demirbaşları</i>
+                                                    </a>
+                                                    <a href="/User/EditUser/" class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-user"></i>  Düzenle
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+                        </div>
+                    </div>@*
+        </div>*@
+                    <!-- /.card -->
+                </section>
+
+
+
+            </div>
+            <!-- /.card-body -->
         </div>
         <!-- /.card -->
     </section>
-    <!-- /.content -->
+    <br /><br />
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Pasif Mağazalar</h1>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+
+
+                <section class="content">
+                    <!-- Default box -->
+                    @*<div class="card card-solid">*@
+                    <div class="card-body pb-0">
+                        <div class="row d-flex align-items-stretch">
+                            @foreach (var item in Model)
+                            {
+                                if (item.StoreStatus == false)
+                                {
+                                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                                        <div class="card bg-light">
+                                            <div class="card-header text-muted border-bottom-0">
+                                                <b>@item.StoreName</b>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="text-right">
+                                                    <a href="#" class="btn btn-sm bg-teal">
+                                                        <i class="fas fa-comments">Mağaza Demirbaşları</i>
+                                                    </a>
+                                                    <a href="/User/EditUser/" class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-user"></i>  Düzenle
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                }
+
+                            }
+                        </div>
+                    </div>@*
+        </div>*@
+                    <!-- /.card -->
+                </section>
+
+
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </section>
 </body>
 </html>

@@ -24,9 +24,35 @@ namespace FullaDemirbas.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AddBrand(Brand brand)
+        public ActionResult AddBrand(Brand b)
         {
-            bm.BrandAdd(brand);
+            bm.BrandAdd(b);
+            return RedirectToAction("Index");
+        }
+        public ActionResult DisableBrand(int id)
+        {
+            var brandvalue = bm.GetByID(id);
+            brandvalue.BrandStatus = false;
+            bm.BrandDisable(brandvalue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableBrand(int id)
+        {
+            var brandvalue = bm.GetByID(id);
+            brandvalue.BrandStatus = true;
+            bm.BrandEnable(brandvalue);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult EditBrand(int id)
+        {
+            var brandvalue = bm.GetByID(id);
+            return View(brandvalue);
+        }
+        [HttpPost]
+        public ActionResult EditBrand(Brand b)
+        {
+            bm.BrandUpdate(b);
             return RedirectToAction("Index");
         }
     }
