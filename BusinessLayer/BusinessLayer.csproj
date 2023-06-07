@@ -60,11 +60,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IBrandService.cs" />
     <Compile Include="Abstract\ICategoryService.cs" />
     <Compile Include="Abstract\IFixtureService.cs" />
     <Compile Include="Abstract\IStoreService.cs" />
     <Compile Include="Abstract\ISubCategoryService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
+    <Compile Include="Concrete\BrandManeger.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\FixtureManager.cs" />
     <Compile Include="Concrete\StoreManeger.cs" />

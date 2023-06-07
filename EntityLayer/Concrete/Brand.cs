@@ -13,6 +13,7 @@ namespace EntityLayer.Concrete
         public int BrandID { get; set; }
         [StringLength(100)]
         public string BrandName { get; set; }
+        public bool BrandStatus { get; set; }
 
         public ICollection<Model> model { get; set; }
 
