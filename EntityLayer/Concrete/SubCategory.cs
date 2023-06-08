@@ -22,6 +22,6 @@ namespace EntityLayer.Concrete
 
         public ICollection<Fixture> fixtures { get; set; }
 
-        public ICollection<Brand> brand { get; set; }
+        //public ICollection<Brand> brand { get; set; }
     }
 }
