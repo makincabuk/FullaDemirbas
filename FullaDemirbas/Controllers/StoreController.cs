@@ -30,6 +30,32 @@ namespace FullaDemirbas.Controllers
             SM.StoreAdd(store);
             return RedirectToAction("Index");
         }
+        public ActionResult DisableStore(int id)
+        {
+            var storevalue = SM.GetByID(id);
+            storevalue.StoreStatus = false;
+            SM.StoreUpdate(storevalue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableStore(int id)
+        {
+            var storevalue = SM.GetByID(id);
+            storevalue.StoreStatus = true;
+            SM.StoreUpdate(storevalue);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult EditStore(int id)
+        {
+            var storevalue = SM.GetByID(id);
+            return View(storevalue);
+        }
+        [HttpPost]
+        public ActionResult EditStore(Store S)
+        {
+            SM.StoreUpdate(S);
+            return RedirectToAction("Index");
+        }
 
     }
 }

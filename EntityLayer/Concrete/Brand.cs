@@ -16,6 +16,8 @@ namespace EntityLayer.Concrete
         public bool BrandStatus { get; set; }
 
         public ICollection<Model> model { get; set; }
+        public int SubCategoryId { get; set; }
+        public virtual SubCategory SubCategory { get; set; }
 
     }
 }

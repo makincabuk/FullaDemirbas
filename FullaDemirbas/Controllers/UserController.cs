@@ -66,6 +66,19 @@ namespace FullaDemirbas.Controllers
             return View();
         }
 
-
+        public ActionResult DisableUser(int id)
+        {
+            var userevalue = um.GetByID(id);
+            userevalue.UserStatus = false;
+            um.UserUpdate(userevalue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableUser(int id)
+        {
+            var userevalue = um.GetByID(id);
+            userevalue.UserStatus = true;
+            um.UserUpdate(userevalue);
+            return RedirectToAction("Index");
+        }
     }
 }

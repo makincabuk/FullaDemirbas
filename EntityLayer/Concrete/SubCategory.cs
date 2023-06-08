@@ -21,5 +21,7 @@ namespace EntityLayer.Concrete
         public virtual Category Category { get; set; }
 
         public ICollection<Fixture> fixtures { get; set; }
+
+        public ICollection<Brand> brand { get; set; }
     }
 }

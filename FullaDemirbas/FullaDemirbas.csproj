@@ -2308,6 +2308,7 @@
     <Content Include="Views\Brand\Index.cshtml" />
     <Content Include="Views\Brand\AddBrand.cshtml" />
     <Content Include="Views\Brand\EditBrand.cshtml" />
+    <Content Include="Views\Store\EditStore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,27 +31,6 @@
 </p>
 
 
-<!DOCTYPE html>
-<html>
-<body class="hold-transition sidebar-mini">
-    <!-- /.navbar -->
-    <!-- Content Header (Page header) -->
-
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Mağazalar Sayfası</h1>
-                </div>
-
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- Main content -->
-    <!-- /.content -->
-</body>
-</html>
-
 
 <!DOCTYPE html>
 <html>
@@ -101,8 +80,13 @@
                                                     <a href="#" class="btn btn-sm bg-teal">
                                                         <i class="fas fa-comments">Mağaza Demirbaşları</i>
                                                     </a>
-                                                    <a href="/User/EditUser/" class="btn btn-sm btn-primary">
+                                                    <a href="/Store/EditStore/@item.StoreID" class="btn btn-sm btn-primary">
                                                         <i class="fas fa-user"></i>  Düzenle
+                                                    </a>
+                                                    <a class="btn btn-danger btn-sm" href="/Store/DisableStore/@item.StoreID">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Pasif Et
                                                     </a>
                                                 </div>
                                             </div>
@@ -114,7 +98,7 @@
                             }
                         </div>
                     </div>@*
-        </div>*@
+                        </div>*@
                     <!-- /.card -->
                 </section>
 
@@ -168,8 +152,13 @@
                                                     <a href="#" class="btn btn-sm bg-teal">
                                                         <i class="fas fa-comments">Mağaza Demirbaşları</i>
                                                     </a>
-                                                    <a href="/User/EditUser/" class="btn btn-sm btn-primary">
+                                                    <a href="/Store/EditStore/@item.StoreID" class="btn btn-sm btn-primary">
                                                         <i class="fas fa-user"></i>  Düzenle
+                                                    </a>
+                                                    <a class="btn btn-success btn-sm" href="/Store/EnableStore/@item.StoreID">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Aktif Et
                                                     </a>
                                                 </div>
                                             </div>
@@ -182,7 +171,7 @@
                             }
                         </div>
                     </div>@*
-        </div>*@
+                        </div>*@
                     <!-- /.card -->
                 </section>
 
