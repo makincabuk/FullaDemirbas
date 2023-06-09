@@ -16,6 +16,8 @@ namespace EntityLayer.Concrete
         [StringLength(200)]
         public string AdminUserPassword { get; set; }
         [StringLength(1)]
+
+        public bool AdminStatus { get; set; }
         public string AdminRole { get; set; }
     }
 }

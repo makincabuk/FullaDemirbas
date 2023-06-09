@@ -45,6 +45,19 @@ namespace FullaDemirbas.Controllers
             ADM.AdminAdd(A);
             return RedirectToAction("Index");
         }
-
+        public ActionResult DisableAdmin(int id)
+        {
+            var adminvalue = ADM.GetByID(id);
+            adminvalue.AdminStatus = false;
+            ADM.AdminDisable(adminvalue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult EnableAdmin(int id)
+        {
+            var adminvalue = ADM.GetByID(id);
+            adminvalue.AdminStatus = true;
+            ADM.AdminDisable(adminvalue);
+            return RedirectToAction("Index");
+        }
     }
 }
