@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IFixtureDal.cs" />
     <Compile Include="Abstract\IBrandDal.cs" />
@@ -60,6 +60,7 @@
     <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repositories\AdminRepository.cs" />
     <Compile Include="Concrete\Repositories\BrandRepository.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\FixtureRepository.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Concrete\Repositories\UserRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAbautDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfBrandDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfFixtureDal.cs" />
