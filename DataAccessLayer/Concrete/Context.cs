@@ -19,5 +19,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Brand> Brands { get; set; }
 
         public DbSet<Model> Models { get; set; }
+
+        public DbSet<Admin> Admins { get; set; }
     }
 }
