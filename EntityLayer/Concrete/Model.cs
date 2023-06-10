@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete
         public string ModelName { get; set; }
 
         public bool ModelStatus { get; set; }
-        public int BrandId { get; set; }
-        public virtual Model model { get; set; }
+        public int BrandID { get; set; }
+        public virtual Brand Brand { get; set; }
     }
 }

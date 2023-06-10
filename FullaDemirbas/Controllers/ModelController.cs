@@ -16,7 +16,7 @@ namespace FullaDemirbas.Controllers
         public ActionResult Index()
         {
             var modelvalues = MM.GetList();
-            return View(model);
+            return View(modelvalues);
         }
         [HttpGet]
         public ActionResult AddModel()
