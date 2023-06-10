@@ -18,32 +18,32 @@ namespace BusinessLayer.Concrete
         }
         public Model GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _modeldal.Get(x => x.ModelID == id);
         }
 
         public List<Model> GetList()
         {
-            throw new NotImplementedException();
+            return _modeldal.List();
         }
 
-        public void ModelAdd(Model admin)
+        public void ModelAdd(Model model)
         {
-            throw new NotImplementedException();
+            _modeldal.Insert(model);
         }
 
-        public void ModelDisable(Model admin)
+        public void ModelDisable(Model model)
         {
-            throw new NotImplementedException();
+            _modeldal.Update(model);
         }
 
-        public void ModelEnable(Model admin)
+        public void ModelEnable(Model model)
         {
-            throw new NotImplementedException();
+            _modeldal.Update(model);
         }
 
-        public void ModelUpdate(Model admin)
+        public void ModelUpdate(Model model)
         {
-            throw new NotImplementedException();
+            _modeldal.Update(model);
         }
     }
 }

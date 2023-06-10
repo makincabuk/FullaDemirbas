@@ -102,6 +102,10 @@
     <Compile Include="Migrations\202306091146338_Add_Admin_Status_Prop.designer.cs">
       <DependentUpon>202306091146338_Add_Admin_Status_Prop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306100802243_model_id_update.cs" />
+    <Compile Include="Migrations\202306100802243_model_id_update.designer.cs">
+      <DependentUpon>202306100802243_model_id_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202306091146338_Add_Admin_Status_Prop.resx">
       <DependentUpon>202306091146338_Add_Admin_Status_Prop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306100802243_model_id_update.resx">
+      <DependentUpon>202306100802243_model_id_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

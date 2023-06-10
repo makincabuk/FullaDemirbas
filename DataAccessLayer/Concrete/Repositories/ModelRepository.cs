@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete.Repositories
 {
-    class ModelRepository : IModelDal
+    public class ModelRepository : IModelDal
     {
         public void Delete(Model p)
         {
