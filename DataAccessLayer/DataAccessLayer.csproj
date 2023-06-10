@@ -55,6 +55,7 @@
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IFixtureDal.cs" />
     <Compile Include="Abstract\IBrandDal.cs" />
+    <Compile Include="Abstract\IModelDal.cs" />
     <Compile Include="Abstract\IStoreDal.cs" />
     <Compile Include="Abstract\ISubCategoryDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
@@ -64,15 +65,16 @@
     <Compile Include="Concrete\Repositories\BrandRepository.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\FixtureRepository.cs" />
+    <Compile Include="Concrete\Repositories\ModelRepository.cs" />
     <Compile Include="Concrete\Repositories\StoreRepository.cs" />
     <Compile Include="Concrete\Repositories\SubCategoryRespository.cs" />
     <Compile Include="Concrete\Repositories\UserRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
-    <Compile Include="EntityFramework\EfAbautDal.cs" />
     <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfBrandDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfFixtureDal.cs" />
+    <Compile Include="EntityFramework\EfModelDal.cs" />
     <Compile Include="EntityFramework\EfStoreDal.cs" />
     <Compile Include="EntityFramework\EfSubCategoryDal.cs" />
     <Compile Include="EntityFramework\EfUserDal.cs" />

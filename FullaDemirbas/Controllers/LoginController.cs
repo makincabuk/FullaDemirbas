@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace FullaDemirbas.Controllers
 {
@@ -26,7 +27,8 @@ namespace FullaDemirbas.Controllers
             var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUsername == A.AdminUsername && x.AdminUserPassword == A.AdminUserPassword);
             if (adminuserinfo != null)
             {
-
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUsername,false);
+                Session["AdminUsername"] = adminuserinfo.AdminUsername;
                 return RedirectToAction("Index", "AdminCategory");
             }
             else
