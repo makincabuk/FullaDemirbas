@@ -4,6 +4,33 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
+<p align="right">
+    <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">
+        Model Ekle
+    </button>
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Model Bilgilerini Giriniz
+                </div>
+                <form method="post" action="/Store/AddStore">
+                    <div class="modal-body">
+                        <label>Model Adı</label>
+                        <input type="text" name="ModelName" class="form-control" />
+                        <br />
+                        <label>Marka Seçiniz</label>
+                        <input type="text" name="ModelName" class="form-control" />
+                        <br />
+                        <button class="btn btn-info">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</p>
+
 
 <!DOCTYPE html>
 <html>
